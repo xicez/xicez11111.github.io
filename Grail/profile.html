@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Kaushan+Script|Montserrat' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+
+
+    <title>Profile &ndash; </title>
+
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+  
+
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="" href="index.html">Grail</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="menu-item-divided pure-menu-selected">
+                <a href="#">Profile</a>
+                </li>
+                <li><a href="#">Trophies</a></li>
+                <li><a href="#">Time Machine</a></li>
+                <Li><a href="#">Search</a></Li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Nigel Silva-Dallenbach</h1>
+            <h2>Smexy. Innovative. Unique.</h2>
+        </div>
+    </div>
+
+    <div class="profile-bio">
+      <div class="bio">
+    <p>
+        This is a bio about me, My name is nigel, I was born in New jersey, I am 14 years old.
+    </p>
+      </div>
+    </div>
+    <h2 class="header sc-feed">Social Feed</h2>
+    <footer>
+        <p class="pg-end">End of page</p>
+        <div class="scroll-top-wrapper">
+            <span class="scroll-top-inner">
+            <a class="scroll-up">Scroll up?</a>
+            </span>
+        </div>
+        <script> 
+        $(function(){
+         
+            $(document).on( 'scroll', function(){
+                $('.scroll-top-wrapper').on('click', scrollToTop);
+        });
+        function scrollToTop() {
+            verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+            element = $('body');
+            offset = element.offset();
+            offsetTop = offset.top;
+            $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+    }
+        </script>
+            </footer>
+        <!--    <section class="footer-bottom">
+
+            </section> -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="js/instafeed.min.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
+        </div>
+</body>
+    </html>
